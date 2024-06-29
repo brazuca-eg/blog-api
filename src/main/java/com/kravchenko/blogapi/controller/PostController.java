@@ -14,7 +14,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
 @Tag(name = "CRUD REST APIs for Posts")
@@ -46,7 +48,13 @@ public class PostController implements GeneralCrudController<Post> {
     @PostMapping
     public ResponseEntity<Post> create(@RequestBody Post post) {
         try {
-            return ResponseEntity.ok(postService.createPost(post));
+            Post createdPost = postService.createPost(post);
+            URI location = ServletUriComponentsBuilder
+                    .fromCurrentRequest()
+                    .path("/{id}")
+                    .buildAndExpand(createdPost.getId())
+                    .toUri();
+            return ResponseEntity.created(location).body(createdPost);
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body(null);
         }

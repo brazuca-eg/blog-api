@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "author": {
+      "id": "22",
+      "username": "general22",
+      "email": "general22.egor@gmail.com",
+      "password": "general2222",
+      "profileInfo": "General user 22",
+      "posts": []
+    },
+    "title": "Sample Post 1",
+    "content": "This is the content of post 1",
+    "comments": []
+
+  },
+  {
+    "id": "2",
+    "author": {
+      "id": "23",
+      "username": "general23",
+      "email": "general23.egor@gmail.com",
+      "password": "general2322",
+      "profileInfo": "General user 23",
+      "posts": []
+    },
+    "title": "Sample Post 2",
+    "content": "This is the content of post 2",
+    "comments": []
+
+  }
+]

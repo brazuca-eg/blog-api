@@ -1,0 +1,18 @@
+[
+  {
+    "id": "22",
+    "username": "general22",
+    "email": "general22.egor@gmail.com",
+    "password": "general2222",
+    "profileInfo": "General user 22",
+    "posts": []
+  },
+  {
+    "id": "23",
+    "username": "general23",
+    "email": "general23.egor@gmail.com",
+    "password": "general2322",
+    "profileInfo": "General user 23",
+    "posts": []
+  }
+]
